@@ -1,0 +1,33 @@
+
+
+
+{% for review in reviews %}
+
+    <div class="box">
+
+        <h3>Продукт:<a href="{% url "product_detail" review.product_id %}"> {{ review.product.title }}</a></h3>
+
+
+        <p>Отзыв: {{ review.review }}</p>
+        <p>Оценка: {{ review.grade }}</p>
+
+
+
+
+
+
+    </div>
+
+    {% empty %}
+
+    <h2 class="text-center">Нет отзывов</h2>
+
+{% endfor %}
+
+
+
+{% if is_paginated %}
+
+    {% include 'partial/pagination.html' %}
+
+{% endif %}

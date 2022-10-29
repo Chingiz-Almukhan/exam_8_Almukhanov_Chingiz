@@ -1,12 +1,10 @@
+
 {% extends 'base.html' %}
-{% load django_bootstrap5 %}
-
+{% block title %} Edit {% endblock %}
 {% block content %}
-
-    <form action="{% url 'register' %}" class="col text-center" method="POST">
-        {% csrf_token %}
-        {% bootstrap_form form %}
-        {% bootstrap_button button_type="submit" content="Зарегистрироваться" %}
+    <h4 class="text-center my-3 pb-3">Регистрация</h4>
+    <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2"
+          action="{% url 'register' %}" method="POST" enctype="multipart/form-data">
+        {% include 'partial/add_edit_form.html' with button_text='Зарегистрироваться' %}
     </form>
-
 {% endblock %}

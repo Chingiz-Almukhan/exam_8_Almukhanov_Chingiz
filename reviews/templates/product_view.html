@@ -74,7 +74,7 @@
 
                                                     <div class="">
                                                         <h4>
-                                                            Автор: {{ r.author }}
+                                                            Автор: <a href="{% url 'profile' r.author_id %}" >{{ r.author }}</a>
                                                             Email: {{r.author.email}}
                                                         </h4>
                                                         <div class=" d-flex align-items-center">
