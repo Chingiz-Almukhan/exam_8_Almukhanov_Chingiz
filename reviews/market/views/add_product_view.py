@@ -10,6 +10,7 @@ class AddProductView(LoginRequiredMixin, CreateView):
     success_url = ('/')
     model = Product
     form_class = AddEditProductForm
+
     # groups = ['manager', 'root']
 
     # def get_success_url(self):
@@ -17,3 +18,6 @@ class AddProductView(LoginRequiredMixin, CreateView):
     #     set_user.users.add(self.request.user)
     #     set_user.save()
     #     return redirect('projects')
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)

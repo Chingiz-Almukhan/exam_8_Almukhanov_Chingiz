@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %} Edit {% endblock %}
+{% block content %}
+    <h4 class="text-center my-3 pb-3">Редактировать отзыв</h4>
+    <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2"
+          action="{% url 'edit_review' review.pk %}" method="POST" enctype="multipart/form-data">
+        {% include 'partial/add_edit_form.html' with button_text='Редактировать' %}
+    </form>
+{% endblock %}
