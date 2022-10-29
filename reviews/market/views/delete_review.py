@@ -4,7 +4,7 @@ from django.shortcuts import redirect
 from market.models import Review
 
 
-def delete(LoginRequiredMixin, request, pk):
+def delete(request, pk):
     review = Review.objects.get(pk=pk)
     review.delete()
     return redirect('main')

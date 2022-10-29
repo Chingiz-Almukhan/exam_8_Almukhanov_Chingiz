@@ -8,7 +8,6 @@ from accounts.models import Profile
 
 class ProfileInline(admin.StackedInline):
     model = Profile
-    fields = ('birthday', 'avatar')
 
 
 class ProfileAdmin(UserAdmin):

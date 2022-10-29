@@ -1,0 +1,344 @@
+[
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "moderator",
+    "permissions": [
+      [
+        "add_product",
+        "market",
+        "product"
+      ],
+      [
+        "change_product",
+        "market",
+        "product"
+      ],
+      [
+        "delete_product",
+        "market",
+        "product"
+      ],
+      [
+        "view_product",
+        "market",
+        "product"
+      ],
+      [
+        "add_review",
+        "market",
+        "review"
+      ],
+      [
+        "change_review",
+        "market",
+        "review"
+      ],
+      [
+        "delete_review",
+        "market",
+        "review"
+      ],
+      [
+        "view_review",
+        "market",
+        "review"
+      ]
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$MVojcnx7Eo2Ii2Yu4zOjO2$WRamo7r0AhChYgXpjwPp2HisP1rzLAGhNaeqB/eWIkM=",
+    "last_login": "2022-10-29T13:52:37.022Z",
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "аву",
+    "last_name": "test",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-10-29T11:11:08Z",
+    "groups": [
+      [
+        "moderator"
+      ]
+    ],
+    "user_permissions": [
+      [
+        "add_profile",
+        "accounts",
+        "profile"
+      ],
+      [
+        "change_profile",
+        "accounts",
+        "profile"
+      ],
+      [
+        "delete_profile",
+        "accounts",
+        "profile"
+      ],
+      [
+        "view_profile",
+        "accounts",
+        "profile"
+      ],
+      [
+        "add_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "change_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "delete_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "view_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "add_group",
+        "auth",
+        "group"
+      ],
+      [
+        "change_group",
+        "auth",
+        "group"
+      ],
+      [
+        "delete_group",
+        "auth",
+        "group"
+      ],
+      [
+        "view_group",
+        "auth",
+        "group"
+      ],
+      [
+        "add_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "change_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "delete_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "view_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "add_user",
+        "auth",
+        "user"
+      ],
+      [
+        "change_user",
+        "auth",
+        "user"
+      ],
+      [
+        "delete_user",
+        "auth",
+        "user"
+      ],
+      [
+        "view_user",
+        "auth",
+        "user"
+      ],
+      [
+        "add_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "change_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "delete_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "view_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "add_product",
+        "market",
+        "product"
+      ],
+      [
+        "change_product",
+        "market",
+        "product"
+      ],
+      [
+        "delete_product",
+        "market",
+        "product"
+      ],
+      [
+        "view_product",
+        "market",
+        "product"
+      ],
+      [
+        "add_review",
+        "market",
+        "review"
+      ],
+      [
+        "change_review",
+        "market",
+        "review"
+      ],
+      [
+        "delete_review",
+        "market",
+        "review"
+      ],
+      [
+        "view_review",
+        "market",
+        "review"
+      ],
+      [
+        "add_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "change_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "delete_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "view_session",
+        "sessions",
+        "session"
+      ]
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$j6za7yVkCRGmLNEksGbsS9$ARHJaC0jw3thucuGDmidsb3IvEmFDKyyocj45mQO3rM=",
+    "last_login": "2022-10-29T13:34:59Z",
+    "is_superuser": false,
+    "username": "moderator",
+    "first_name": "",
+    "last_name": "",
+    "email": "moderator@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-10-29T13:34:58Z",
+    "groups": [
+      [
+        "moderator"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$0DBsKanAj8fs1CNYuOLAm8$nJ1P4KuAld2dMU4BMX96A/PgIKNAogzqH9Pkbl61e1k=",
+    "last_login": "2022-10-29T13:37:37.312Z",
+    "is_superuser": false,
+    "username": "user",
+    "first_name": "",
+    "last_name": "",
+    "email": "chingizpain@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-10-29T13:37:36.809Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "market.product",
+  "pk": 3,
+  "fields": {
+    "category": "other",
+    "title": "Товар",
+    "description": "",
+    "image": "product_img/default.png",
+    "author": [
+      "root"
+    ]
+  }
+},
+{
+  "model": "market.product",
+  "pk": 4,
+  "fields": {
+    "category": "technique",
+    "title": "Playstation 5",
+    "description": "",
+    "image": "product_img/img_0_68_235_2_1.jpg",
+    "author": [
+      "root"
+    ]
+  }
+},
+{
+  "model": "market.review",
+  "pk": 4,
+  "fields": {
+    "author": [
+      "root"
+    ],
+    "product": 3,
+    "review": "aefeaf",
+    "grade": "3"
+  }
+},
+{
+  "model": "market.review",
+  "pk": 8,
+  "fields": {
+    "author": [
+      "user"
+    ],
+    "product": 3,
+    "review": "test",
+    "grade": "3"
+  }
+}
+]

@@ -20,7 +20,10 @@ class ProductDetailView(DetailView):
             raiting.append(i.grade)
         for i in raiting:
             all_rait += int(i)
-        context_raiting = all_rait / len(raiting)
-        context['raiting'] = math.ceil(context_raiting)
+        if len(raiting) == 0:
+            context['raiting'] = 0
+        else:
+            context_raiting = all_rait / len(raiting)
+            context['raiting'] = math.ceil(context_raiting)
         context['categories'] = CATEGORIES
         return context

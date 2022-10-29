@@ -18,9 +18,4 @@ urlpatterns = [
     path('add_review/<int:pk>', AddReviewView.as_view(), name='add_review'),
     path('delete/review/<int:pk>', delete, name='delete_review'),
     path('edit/review/<int:pk>', EditReviewView.as_view(), name='edit_review'),
-    # path('project/<int:pk>', ProjectDetailView.as_view(), name='project'),
-    # path('add/project', AddProjectView.as_view(), name='add_project'),
-    # path('edit/user/<int:pk>', EditUserView.as_view(), name='edit_user'),
-    # path('delete/project/<int:pk>', DeleteProjectView.as_view(), name='delete_project'),
-    # path('edit/project/<int:pk>', EditProjectView.as_view(), name='edit_project')
 ]

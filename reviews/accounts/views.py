@@ -1,6 +1,5 @@
 from django.contrib.auth import authenticate, login, logout, get_user_model
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.core.paginator import Paginator
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse
 
 from accounts.forms import LoginForm, MyUserCreationForm, UserChangeForm, PasswordChangeForm
@@ -54,7 +53,7 @@ class RegisterView(CreateView):
         return self.render_to_response(context)
 
 
-class ProfileView(LoginRequiredMixin, DetailView):
+class ProfileView(DetailView):
     model = get_user_model()
     template_name = 'user_detail.html'
     context_object_name = 'user_obj'
@@ -66,18 +65,24 @@ class ProfileView(LoginRequiredMixin, DetailView):
         return context
 
 
-class UserChangeView(UpdateView):
+class UserChangeView(UserPassesTestMixin, LoginRequiredMixin, UpdateView):
     model = get_user_model()
     form_class = UserChangeForm
     template_name = 'user_change.html'
     context_object_name = 'user_obj'
 
+    def test_func(self):
+        return self.request.user == self.get_object()
 
-class UserPasswordChangeView(UpdateView):
+
+class UserPasswordChangeView(UserPassesTestMixin, LoginRequiredMixin, UpdateView):
     model = get_user_model()
     template_name = 'user_password_change.html'
     form_class = PasswordChangeForm
     context_object_name = 'user_obj'
 
+    def test_func(self):
+        return self.request.user == self.get_object()
+
     def get_success_url(self):
-        return reverse('accounts:login')
+        return reverse('main')

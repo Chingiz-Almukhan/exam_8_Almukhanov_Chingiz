@@ -10,7 +10,6 @@ class Profile(models.Model):
         verbose_name='Профиль пользователя'
     )
 
-
     def __str__(self):
         return f'Профиль пользователя {self.user.get_full_name()}'
 

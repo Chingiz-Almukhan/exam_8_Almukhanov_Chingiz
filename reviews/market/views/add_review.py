@@ -10,7 +10,6 @@ class AddReviewView(LoginRequiredMixin, CreateView):
     template_name = 'add_review.html'
     model = Review
     form_class = AddEditReviewForm
-    # groups = ['manager', 'root']
 
     def get_success_url(self):
         return redirect('main')
@@ -22,5 +21,3 @@ class AddReviewView(LoginRequiredMixin, CreateView):
         review.author = self.request.user
         review.save()
         return redirect('product_detail', pk=product.pk)
-
-
